@@ -22,7 +22,7 @@ const Cast = ({ id }) => {
             alt={name}
           />
           <h1>{name}</h1>
-          <p>{`as ${character}`}</p>
+          <h3>{`as ${character}`}</h3>
         </li>
       ))}
     </ul>
