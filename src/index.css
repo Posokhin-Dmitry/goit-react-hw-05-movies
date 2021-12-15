@@ -23,6 +23,11 @@ a {
   color: inherit;
 }
 
+.flex {
+  display: flex;
+  margin-bottom: 100px;
+}
+
 .header {
   margin-bottom: 30px;
   padding: 30px;
@@ -70,7 +75,7 @@ a {
 
 .card-item {
   display: flex;
-  width: 350px;
+  width: 330px;
   padding: 15px;
   margin: 20px;
   flex-direction: column;
@@ -108,12 +113,15 @@ a {
 }
 
 .film-card {
-  display: flex;
   margin-top: 40px;
   padding: 30px;
   background-color: #e7e7e7;
   box-shadow: 3px 3px 10px #52ebeb, -3px -3px 10px #4ee3eb;
   border-radius: 7px;
+}
+
+.img-film {
+  width: 300px;
 }
 
 .film-text-section {
@@ -141,6 +149,7 @@ a {
 
 .film-card-overview {
   margin: 0;
+  margin-bottom: 30px;
   font-size: 20px;
 }
 
@@ -150,7 +159,8 @@ a {
 }
 .button,
 .button-next {
-  border: none;
+  border: 1px solid #363636;
+
   border-radius: 5px;
   width: 100px;
   font-size: 25px;
@@ -176,4 +186,14 @@ a {
   border: none;
   border-radius: 5px;
   box-shadow: 3px 3px 10px #52ebeb, -3px -3px 10px #4ee3eb;
+}
+
+.cast-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cast-item {
+  width: 380px;
+  padding: 30px;
 }

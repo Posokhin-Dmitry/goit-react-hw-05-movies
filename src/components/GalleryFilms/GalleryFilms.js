@@ -9,8 +9,13 @@ const GalleryFilms = ({ dataFilms }) => {
           <li key={id} className="card-item">
             <Link to={`/movies/${id}`}>
               <img
-                src={`https://image.tmdb.org/t/p/w300/${poster_path}`}
+                src={
+                  poster_path
+                    ? `https://image.tmdb.org/t/p/w300/${poster_path}`
+                    : 'https://ya1.fastfilm.net/images/poster_none.png'
+                }
                 alt={original_title}
+                className="img-film"
               />
               <h1 className="card-title">{original_title}</h1>
               <div className="section-card-text">

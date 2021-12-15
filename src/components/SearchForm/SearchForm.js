@@ -11,7 +11,7 @@ const SearchForm = ({ onSubmit }) => {
   const handleSubmit = event => {
     event.preventDefault();
     if (query.trim() === '') {
-      alert('enter the name of the picture');
+      alert('enter the name of the movie');
     }
     onSubmit(query);
     setQuery('');
