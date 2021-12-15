@@ -1,9 +1,10 @@
 import React, { Switch, Route } from 'react-router-dom';
 import './App.css';
-import * as api from './servises/api';
+// import * as api from './servises/api';
 import Header from './components/Header/Header';
 import HomeView from './views/HomeView';
 import MovieDetailsPage from './views/MovieDetailsPage';
+import MoviePage from './views/MoviesPage';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <HomeView />
         </Route>
         <Route path="/movies" exact>
-          <h1>тут будет поиск по названию</h1>
+          <MoviePage />
         </Route>
         <Route path="/movies/:filmId">
           <MovieDetailsPage />

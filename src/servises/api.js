@@ -6,8 +6,10 @@ const key = 'a1c9899f2422fff761216d2ec8b5e124';
 export const getTrendingMovies = () =>
   axios.get(BASEURL + `trending/movie/day?api_key=${key}`);
 
-export const getSearchMovie = query =>
-  axios.get(BASEURL + `search/movie?api_key=${key}&query=${query}&page=1`);
+export const getSearchMovie = (query, page) =>
+  axios.get(
+    BASEURL + `search/movie?api_key=${key}&query=${query}&page=${page}`,
+  );
 
 export const getMovieDetails = id =>
   axios.get(BASEURL + `movie/${id}?api_key=${key}`);
