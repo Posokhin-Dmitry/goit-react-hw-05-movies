@@ -14,7 +14,7 @@ function App() {
           <HomeView />
         </Route>
         <Route path="/movies" exact>
-          <h1>search</h1>
+          <h1>тут будет поиск по названию</h1>
         </Route>
         <Route path="/movies/:filmId">
           <MovieDetailsPage />
