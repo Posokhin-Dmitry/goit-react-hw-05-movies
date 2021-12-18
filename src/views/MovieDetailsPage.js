@@ -1,4 +1,10 @@
-import { useParams, Link, useRouteMatch, Route } from 'react-router-dom';
+import {
+  useParams,
+  Link,
+  useRouteMatch,
+  Route,
+  useHistory,
+} from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import * as api from '../servises/api';
 import Container from '../components/Container/Container';
@@ -9,6 +15,7 @@ const MovieDetailsPage = () => {
   const [dataFilm, setDataFilm] = useState({});
   const { filmId } = useParams();
   const { url } = useRouteMatch();
+  const history = useHistory();
   const {
     id,
     poster_path,
@@ -26,6 +33,9 @@ const MovieDetailsPage = () => {
 
   return (
     <Container>
+      <button type="button" className="button" onClick={history.goBack}>
+        Back
+      </button>
       <div className="film-card">
         <div className="flex">
           <img
