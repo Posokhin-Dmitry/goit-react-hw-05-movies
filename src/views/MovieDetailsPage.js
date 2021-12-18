@@ -58,7 +58,6 @@ const MovieDetailsPage = () => {
                 Cast
               </button>
             </Link>
-
             <Link to={`${url}/review`}>
               <button className="button" type="button">
                 Review

@@ -159,6 +159,7 @@ a {
 }
 .button,
 .button-next {
+  margin-left: 15px;
   border: 1px solid #363636;
 
   border-radius: 5px;
