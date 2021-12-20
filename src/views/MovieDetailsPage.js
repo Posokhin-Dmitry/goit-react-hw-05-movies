@@ -4,6 +4,7 @@ import {
   useRouteMatch,
   Route,
   useHistory,
+  useLocation,
 } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import * as api from '../servises/api';
@@ -16,6 +17,7 @@ const MovieDetailsPage = () => {
   const { filmId } = useParams();
   const { url } = useRouteMatch();
   const history = useHistory();
+  const location = useLocation();
   const {
     id,
     poster_path,
@@ -31,11 +33,16 @@ const MovieDetailsPage = () => {
     });
   }, [dataFilm]);
 
+  const onGoBack = () => {
+    history.push(location?.state?.from ?? '/');
+  };
+
   return (
     <Container>
-      <button type="button" className="button" onClick={history.goBack}>
+      <button type="button" className="button" onClick={onGoBack}>
         Back
       </button>
+
       <div className="film-card">
         <div className="flex">
           <img

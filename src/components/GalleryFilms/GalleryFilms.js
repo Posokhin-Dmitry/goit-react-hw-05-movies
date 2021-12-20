@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const GalleryFilms = ({ dataFilms }) => {
+  const location = useLocation();
+
   return (
     <ul className="gallery-cards">
       {dataFilms.map(
         ({ id, original_title, poster_path, vote_average, release_date }) => (
           <li key={id} className="card-item">
-            <Link to={`/movies/${id}`}>
+            <Link to={{ pathname: `movies/${id}`, state: { from: location } }}>
               <img
                 src={
                   poster_path
