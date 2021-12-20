@@ -26,7 +26,7 @@ const MovieDetailsPage = () => {
     release_date = '',
     genres = [],
   } = dataFilm;
-
+  console.log(location);
   useEffect(() => {
     api.getMovieDetails(filmId).then(({ data }) => {
       setDataFilm(data);
@@ -60,12 +60,22 @@ const MovieDetailsPage = () => {
               {genres.map(({ name }) => name).join(', ')}
             </p>
             <p className="film-card-overview">{overview}</p>
-            <Link to={`${url}/cast`}>
+            <Link
+              to={{
+                pathname: `${url}/cast`,
+                state: { from: location.state.from },
+              }}
+            >
               <button className="button" type="button">
                 Cast
               </button>
             </Link>
-            <Link to={`${url}/review`}>
+            <Link
+              to={{
+                pathname: `${url}/review`,
+                state: { from: location.state.from },
+              }}
+            >
               <button className="button" type="button">
                 Review
               </button>
