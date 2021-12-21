@@ -63,7 +63,7 @@ const MovieDetailsPage = () => {
             <Link
               to={{
                 pathname: `${url}/cast`,
-                state: { from: location.state.from },
+                state: { from: location?.state?.from },
               }}
             >
               <button className="button" type="button">
@@ -73,7 +73,7 @@ const MovieDetailsPage = () => {
             <Link
               to={{
                 pathname: `${url}/review`,
-                state: { from: location.state.from },
+                state: { from: location?.state?.from },
               }}
             >
               <button className="button" type="button">
