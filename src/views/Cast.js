@@ -11,7 +11,7 @@ const Cast = ({ id }) => {
 
   return (
     <>
-      {dataCast.lenght > 0 ? (
+      {dataCast.length > 0 ? (
         <ul className="cast-list">
           {dataCast.map(({ id, name, profile_path, character }) => (
             <li key={id} className="cast-item">

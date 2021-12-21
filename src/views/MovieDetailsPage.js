@@ -26,7 +26,7 @@ const MovieDetailsPage = () => {
     release_date = '',
     genres = [],
   } = dataFilm;
-  console.log(location);
+
   useEffect(() => {
     api.getMovieDetails(filmId).then(({ data }) => {
       setDataFilm(data);
